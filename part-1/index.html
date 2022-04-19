@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        font-size: 40px;
+      }
+      p::before {
+        content: "Before ...";
+        color: red;
+      }
+      p::after {
+        content: "... The end";
+        color: green;
+      }
+      .clip {
+        background: url("./images/nature1.jpeg"); /* relative path. ../ is absolute path */
+        height: 400px;
+        width: 500px;
+        background-size: cover;
+        clip-path: polygon(50% 0%, 100% 50%, 0% 50%);
+      }
+      .transform {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        text-align: center;
+        line-height: 200px;
+        font-size: 30px;
+        transform: rotate(45deg);
+        transform: scale(1.3);
+        transform: rotate(45deg);
+      }
+
+      .transform:hover {
+        transform: rotate(45deg) scale(1.3);
+      }
+      .transform:hover {
+        transform: translate(100%);
+      }
+
+      .transition {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        text-align: center;
+        line-height: 200px;
+        font-size: 30px;
+        transition: height 2s, width 2s, line-height 2s;
+      }
+
+      .transition:hover {
+        height: 300px;
+        width: 300px;
+        line-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ipsam modi
+      distinctio sunt nihil facilis est laudantium impedit quas excepturi.
+    </p>
+    <div class="clip"></div>
+    <div class="transform">Hello World</div>
+    <div class="transition">Transition</div>
+  </body>
+</html>
